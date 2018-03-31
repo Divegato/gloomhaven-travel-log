@@ -5,6 +5,11 @@ title: Gloomhaven Travel Log
 
 ### Travel Log
 
-{% for scenario in site.data.scenarios %}
-- {{scenario.number}} {{scenario.name}}
-{% endfor %}
+<ul>
+  {% for post in site.posts %}
+    <li>
+        <h3>{{post.title}}</h3>
+        {{post.excerpt}}
+    </li>
+  {% endfor %}
+</ul>
