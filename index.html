@@ -8,6 +8,8 @@ title: Gloomhaven Travel Log
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="site.css" />
+  <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
 </head>
 
 <body>
@@ -27,20 +29,21 @@ title: Gloomhaven Travel Log
         </h2>
       </div>
     </div>
-      {% for post in site.posts %}
-      <div class="row">
-        {% if post.team != 'Sparkle Kids' %}
-        <div class="col-6">&nbsp;</div>
-        {% endif %}
-        <div class="col-6">
-          <h3>{{post.title}}</h3>
-          {{post.excerpt}}
-        </div>
-        {% if post.team != 'Sunstone Knights' %}
-        <div class="col-6">&nbsp;</div>
-        {% endif %}
+    {% for post in site.posts %}
+    <div class="row">
+      {% if post.team != 'Sparkle Kids' %}
+      <div class="col-6">&nbsp;</div>
+      {% endif %}
+      <div class="col-6">
+        <span class="float-right text-muted">{{post.date | date_to_string}}</span>
+        <h3>{{post.title}}</h3>
+        {{post.excerpt}}
       </div>
-      {% endfor %}
+      {% if post.team != 'Sunstone Knights' %}
+      <div class="col-6">&nbsp;</div>
+      {% endif %}
+    </div>
+    {% endfor %}
   </div>
 </body>
 
