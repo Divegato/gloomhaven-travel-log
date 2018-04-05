@@ -4,5 +4,7 @@ title:  "#2 Barrow Lair"
 date:   2018-01-07 00:00:00 -0600
 team: "Sparkle Kids"
 enemy: bandit-leader
+rewards: ["Location: Inox Encampment (#3)", "Location: Crypt of the Damned (#4)"]
+result: complete
 ---
 We followed the bandit commander. “Who are you to think you can interrupt the work of the Gloom?” he asked before we defeated him and his minions. He seemed weaker than he should have been. We found a location marked on one of his maps where we could learn more about the “Gloom” (#4). Upon our return to Gloomhaven, Jekserah offered us another mission to deal with some Inox who were attacking caravans in the Dagger Forest (#3).
