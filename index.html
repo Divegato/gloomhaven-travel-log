@@ -1,15 +1,30 @@
 ---
 layout: default
 ---
+<ul class="global-achievements">
+  {% for achievement in site.data.achievements.global %}
+  <li>{{achievement}}</li>
+  {% endfor %}
+</ul>
 <div class="team-names row d-md-flex d-none">
-  <div class="col-4">
-    Sparkle Kids
+  <div class="col-md-4 col-12">
+    <h1>Sparkle Kids</h1>
+    <ul class="party-achievements">
+      {% for achievement in site.data.achievements.sparkle_kids %}
+      <li>{{achievement}}</li>
+      {% endfor %}
+    </ul>
   </div>
-  <div class="col-4">
-    Sunstone Knights
+  <div class="col-md-4 col-12">
+    <h1>Sunstone Knights</h1>
+    <ul class="party-achievements">
+      {% for achievement in site.data.achievements.sunstone_knights %}
+      <li>{{achievement}}</li>
+      {% endfor %}
+    </ul>
   </div>
-  <div class="col-4">
-    Capital Intrigue
+  <div class="col-md-4 col-12">
+    <h1>Capital Intrigue</h1>
   </div>
 </div>
 {% for post in site.posts %}

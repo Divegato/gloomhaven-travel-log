@@ -4,6 +4,12 @@
     src: local('High Tower'), local('High-Tower'), url('fonts/HTOWERT.TTF') format('truetype');
 }
 
+@font-face {
+    font-family: 'Nyala';
+    src: url('fonts/nyala.TTF');
+    src: local('Nyala'), url('fonts/nyala.TTF') format('truetype');
+}
+
 body {
     background-color: #6c2533;
     font-family: 'High Tower', serif;
@@ -12,10 +18,31 @@ body {
     }
     .container {
         background-color: #f0e1da;
-        .team-names {
-            text-align: center;
-            font-size: 3.5rem;
+        ul.global-achievements {
             font-family: 'Pirata One', cursive;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 0;
+            li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+        }
+        .team-names {
+            font-family: 'Pirata One', cursive;
+            text-align: center;
+            h1 {
+                font-size: 3.5rem;
+            }
+            ul.party-achievements {
+                font-weight: bold;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    padding: 0 5px;
+                }
+            }
         }
         .post {
             margin-bottom: 30px;
@@ -33,6 +60,7 @@ body {
                 font-family: 'High Tower', serif;
             }
             .post-footer {
+                font-family: 'nyala', serif;
                 text-align: right;
                 clear: both;
                 .post-reward {
@@ -50,6 +78,7 @@ body {
                     }
                 }
                 .post-signature {
+                    font-family: 'Pirata One', cursive;
                     font-size: large;
                     font-style: italic;
                 }
