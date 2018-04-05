@@ -15,7 +15,7 @@ layout: default
   <div class="col-md-6 d-md-flex d-none">&nbsp;</div>
   {% endif %}
   <div class="col-md-6 col-12">
-    <div class="post">
+    <div class="post post-result-{{post.result}}">
       <div class="post-header">
         <span class="float-right text-muted">{{post.date | date_to_string}}</span>
         <h3>{{post.title}}</h3>
@@ -24,7 +24,13 @@ layout: default
       <div class="post-content">
         {{post.excerpt}}
       </div>
-      <div class="post-signature text-right text-muted">- {{post.team}}</div>
+      <div class="post-footer">
+          {% for reward in post.rewards %}
+          <div class="post-reward">{{reward}}</div>
+          {% endfor %}
+          <div class="post-result post-result-{{post.result}}">{{post.result}}</div>
+          <div class="post-signature text-muted">- {{post.team}}</div>
+      </div>
     </div>
   </div>
   {% if post.team != 'Sunstone Knights' %}

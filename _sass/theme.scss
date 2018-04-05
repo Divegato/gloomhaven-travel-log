@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'High Tower';
-    src: url('fonts/HTOWER.TTF');
-    src: local('High Tower'), local('High-Tower'), url('fonts/HTOWER.TTF') format('truetype');
+    src: url('fonts/HTOWERT.TTF');
+    src: local('High Tower'), local('High-Tower'), url('fonts/HTOWERT.TTF') format('truetype');
 }
 
 body {
@@ -17,6 +17,9 @@ body {
             font-family: 'Pirata One', cursive;
         }
         .post {
+            &.post-result-failed .post-header {
+                text-decoration: line-through;
+            }
             .enemy-image {
                 float: right;
                 max-width: 150px;
@@ -27,10 +30,26 @@ body {
             .post-content {
                 font-family: 'High Tower', serif;
             }
-            .post-signature {
-                font-size: large;
-                font-style: italic;
+            .post-footer {
+                text-align: right;
                 clear: both;
+                .post-reward {
+                    font-size: small;
+                }
+                .post-result {
+                    text-align: right;
+                    &.post-result-complete {
+                        text-transform: uppercase;
+                        color: green;
+                    }
+                    &.post-result-failed {
+                        color: red;
+                    }
+                }
+                .post-signature {
+                    font-size: large;
+                    font-style: italic;
+                }
             }
         }
     }
