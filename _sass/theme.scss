@@ -1,11 +1,19 @@
+@font-face {
+    font-family: 'High Tower';
+    src: url('fonts/HTOWER.TTF');
+    src: local('High Tower'), local('High-Tower'), url('fonts/HTOWER.TTF') format('truetype');
+}
+
 body {
     background-color: #6c2533;
+    font-family: 'High Tower', serif;
     .header-img {
         background-color: #2a1a13;
     }
     .container {
         background-color: #f0e1da;
-        h2 {
+        .team-names {
+            font-size: 4rem;
             font-family: 'Pirata One', cursive;
         }
         .post {
@@ -13,7 +21,7 @@ body {
                 font-family: 'Pirata One', cursive;
             }
             .post-content {
-                font-family: 'Pirata One', cursive;
+                font-family: 'High Tower', serif;
             }
         }
     }
