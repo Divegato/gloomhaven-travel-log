@@ -1,8 +1,21 @@
 body {
-    background-color: #dcd0c0;
+    background-color: #6c2533;
+    .header-img {
+        background-color: #2a1a13;
+    }
     .container {
-        background-color: #c0b283;
+        background-color: #f0e1da;
+        h2 {
+            font-family: 'Pirata One', cursive;
+        }
+        .post {
+            .post-header {
+                font-family: 'Pirata One', cursive;
+            }
+            .post-content {
+                font-family: 'Pirata One', cursive;
+            }
+        }
     }
     color:#373737;
-    font-family: 'Homemade Apple', cursive;
 }
