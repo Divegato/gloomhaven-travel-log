@@ -20,10 +20,11 @@ layout: default
         <span class="float-right text-muted">{{post.date | date_to_string}}</span>
         <h3>{{post.title}}</h3>
       </div>
+      <img src="images/enemies/{{post.enemy}}.jpg" class="img-thumbnail enemy-image" />
       <div class="post-content">
         {{post.excerpt}}
-        <div class="text-right tet-muted">- {{post.team}}</div>
       </div>
+      <div class="post-signature text-right text-muted">- {{post.team}}</div>
     </div>
   </div>
   {% if post.team != 'Sunstone Knights' %}

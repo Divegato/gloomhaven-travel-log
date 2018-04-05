@@ -17,11 +17,20 @@ body {
             font-family: 'Pirata One', cursive;
         }
         .post {
+            .enemy-image {
+                float: right;
+                max-width: 150px;
+            }
             .post-header {
                 font-family: 'Pirata One', cursive;
             }
             .post-content {
                 font-family: 'High Tower', serif;
+            }
+            .post-signature {
+                font-size: large;
+                font-style: italic;
+                clear: both;
             }
         }
     }
