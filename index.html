@@ -2,20 +2,26 @@
 layout: default
 ---
 <div class="team-names row d-md-flex d-none">
-  <div class="col-6 text-left">
+  <div class="col-4">
     Sparkle Kids
   </div>
-  <div class="col-6 text-right">
+  <div class="col-4">
     Sunstone Knights
+  </div>
+  <div class="col-4">
+    Capital Intrigue
   </div>
 </div>
 {% for post in site.posts %}
 <div class="row">
-  {% if post.team != 'Sparkle Kids' %}
-  <div class="col-md-6 d-md-flex d-none">&nbsp;</div>
+  {% if post.team == 'Sunstone Knights' %}
+  <div class="col-md-4 d-md-flex d-none">&nbsp;</div>
+  {% endif %} {% if post.team == 'Capital Intrigue' %}
+  <div class="col-md-8 d-md-flex d-none">&nbsp;</div>
   {% endif %}
-  <div class="col-md-6 col-12">
+  <div class="col-md-4 col-12">
     <div class="post post-result-{{post.result}}">
+      <hr>
       <div class="post-header">
         <span class="float-right text-muted">{{post.date | date_to_string}}</span>
         <h3>{{post.title}}</h3>
@@ -25,16 +31,13 @@ layout: default
         {{post.excerpt}}
       </div>
       <div class="post-footer">
-          {% for reward in post.rewards %}
-          <div class="post-reward">{{reward}}</div>
-          {% endfor %}
-          <div class="post-result post-result-{{post.result}}">{{post.result}}</div>
-          <div class="post-signature text-muted">- {{post.team}}</div>
+        {% for reward in post.rewards %}
+        <div class="post-reward">{{reward}}</div>
+        {% endfor %}
+        <div class="post-result post-result-{{post.result}}">{{post.result}}</div>
+        <div class="post-signature text-muted">- {{post.team}}</div>
       </div>
     </div>
   </div>
-  {% if post.team != 'Sunstone Knights' %}
-  <div class="col-md-6 d-md-flex d-none">&nbsp;</div>
-  {% endif %}
 </div>
 {% endfor %}

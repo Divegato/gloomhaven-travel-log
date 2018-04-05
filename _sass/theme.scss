@@ -13,10 +13,12 @@ body {
     .container {
         background-color: #f0e1da;
         .team-names {
-            font-size: 4rem;
+            text-align: center;
+            font-size: 3.5rem;
             font-family: 'Pirata One', cursive;
         }
         .post {
+            margin-bottom: 30px;
             &.post-result-failed .post-header {
                 text-decoration: line-through;
             }
@@ -38,8 +40,9 @@ body {
                 }
                 .post-result {
                     text-align: right;
+                    text-transform: uppercase;
+                    font-weight: bold;
                     &.post-result-complete {
-                        text-transform: uppercase;
                         color: green;
                     }
                     &.post-result-failed {
