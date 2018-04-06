@@ -88,6 +88,28 @@ body {
                 }
             }
         }
+        .mission-log {
+            font-family: 'Nyala', serif;
+            h1,
+            h3 {
+                font-family: 'Pirata One', cursive;
+            }
+            .mission-available {
+                font-weight: bold;
+            }
+            .mission-complete {
+                .mission-status {
+                    color: green;
+                }
+            }
+            .mission-locked {
+                color: grey;
+                text-decoration: line-through;
+            }
+            .mission-status {
+                text-transform: uppercase;
+            }
+        }
     }
     color:#373737;
 }

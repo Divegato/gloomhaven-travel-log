@@ -1,0 +1,32 @@
+<div class="mission-log">
+  <h1>
+    Mission Log
+  </h1>
+  <div class="row">
+    <div class="col-md-8 col-12">
+      {% assign missions1 = site.data.missions.missions | where_exp:"item", "item.campaign == Nil" %}
+      <ul class="mission-list">
+        {% for mission in missions1 %}
+        <li class="mission-{{mission.status}}">
+          #{{mission.number}} {% if mission.status != "unknown" %} -
+          <span class="mission-status">{{mission.status}}</span>
+          {% endif %} {% if mission.status == "available" or mission.status == "requirement" or mission.status == "unknown" %} - {{mission.name}} {% endif %} {% if mission.note %} ({{mission.note}}) {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-4 col-12">
+      <h3>Capital Intrigue</h3>
+      {% assign missions2 = site.data.missions.missions | where_exp:"item", "item.campaign == 'Capital Intrigue'" %}
+      <ul class="mission-list">
+        {% for mission in missions2 %}
+        <li class="mission-{{mission.status}}">
+          #{{mission.number}} {% if mission.status != "unknown" %} -
+          <span class="mission-status">{{mission.status}}</span>
+          {% endif %} {% if mission.status == "available" or mission.status == "requirement" or mission.status == "unknown" %} - {{mission.name}} {% endif %} {% if mission.note %} ({{mission.note}}) {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
