@@ -6,8 +6,8 @@
 
 @font-face {
     font-family: 'Nyala';
-    src: url('fonts/nyala.TTF');
-    src: local('Nyala'), url('fonts/nyala.TTF') format('truetype');
+    src: url('fonts/nyala.ttf');
+    src: local('Nyala'), url('fonts/nyala.ttf') format('truetype');
 }
 
 body {
@@ -18,30 +18,27 @@ body {
     }
     .container {
         background-color: #f0e1da;
-        ul.global-achievements {
-            font-family: 'Pirata One', cursive;
-            font-size: 1.5rem;
+        ul.achievements {
+            font-family: 'Nyala', serif;
             font-weight: bold;
             text-align: center;
             padding: 0;
             li {
                 display: inline-block;
-                padding: 0 10px;
             }
+            li:not(:last-child):after {
+                content: " \00b7";
+                padding: 5px;
+            }
+        }
+        ul.global-achievements {
+            font-size: 1.5rem;
         }
         .team-names {
             font-family: 'Pirata One', cursive;
             text-align: center;
             h1 {
                 font-size: 3.5rem;
-            }
-            ul.party-achievements {
-                font-weight: bold;
-                padding: 0;
-                li {
-                    display: inline-block;
-                    padding: 0 5px;
-                }
             }
         }
         .post {
@@ -60,7 +57,7 @@ body {
                 font-family: 'High Tower', serif;
             }
             .post-footer {
-                font-family: 'nyala', serif;
+                font-family: 'Nyala', serif;
                 text-align: right;
                 clear: both;
                 .post-reward {

@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<ul class="global-achievements">
+<ul class="achievements global-achievements">
   {% for achievement in site.data.achievements.global %}
   <li>{{achievement}}</li>
   {% endfor %}
@@ -9,7 +9,7 @@ layout: default
 <div class="team-names row d-md-flex d-none">
   <div class="col-md-4 col-12">
     <h1>Sparkle Kids</h1>
-    <ul class="party-achievements">
+    <ul class="achievements party-achievements">
       {% for achievement in site.data.achievements.sparkle_kids %}
       <li>{{achievement}}</li>
       {% endfor %}
@@ -17,7 +17,7 @@ layout: default
   </div>
   <div class="col-md-4 col-12">
     <h1>Sunstone Knights</h1>
-    <ul class="party-achievements">
+    <ul class="achievements party-achievements">
       {% for achievement in site.data.achievements.sunstone_knights %}
       <li>{{achievement}}</li>
       {% endfor %}
