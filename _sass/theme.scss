@@ -41,6 +41,13 @@ body {
                 font-size: 3.5rem;
             }
         }
+        .character-name {
+            font-family: 'Pirata One', cursive;
+            font-style: italic;
+        }
+        .party-image {
+            border: darkgray 1px solid;
+        }
         .post {
             margin-bottom: 30px;
             &.post-result-failed .post-header {
