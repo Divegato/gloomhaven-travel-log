@@ -67,7 +67,11 @@ layout: default
         <span class="float-right text-muted">{{post.date | date_to_string}}</span>
         <h3>{{post.title}}</h3>
       </div>
+      {% if post.image != Nil %}
+      <img src="images/{{post.image}}.jpg" class="img-thumbnail post-image" />
+      {% elsif post.enemy != Nil %}
       <img src="images/enemies/{{post.enemy}}.jpg" class="img-thumbnail enemy-image" />
+      {% endif %}
       <div class="post-content">
         {{post.excerpt}}
       </div>
