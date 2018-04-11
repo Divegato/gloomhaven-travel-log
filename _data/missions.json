@@ -165,6 +165,12 @@
             "name": "Jailbreak",
             "status": "complete",
             "campaign": "Capital Intrigue"
+        },
+        {
+            "number": "CI3",
+            "name": "Slippery Slope",
+            "status": "available",
+            "campaign": "Capital Intrigue"
         }
     ]
 }
