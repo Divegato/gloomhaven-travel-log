@@ -10,7 +10,8 @@
         <li class="mission-{{mission.status}}">
           #{{mission.number}} {% if mission.status != "unknown" %} -
           <span class="mission-status">{{mission.status}}</span>
-          {% endif %} {% if mission.status == "available" or mission.status == "requirement" or mission.status == "unknown" %} - {{mission.name}} {% endif %} {% if mission.note %} ({{mission.note}}) {% endif %}
+          {% endif %} {% if mission.status == "available" or mission.status == "requirement" or mission.status == "unknown" %} - {{mission.name}}
+          {% endif %} {% if mission.note %} ({{mission.note}}) {% endif %}
         </li>
         {% endfor %}
       </ul>
@@ -23,7 +24,11 @@
         <li class="mission-{{mission.status}}">
           #{{mission.number}} {% if mission.status != "unknown" %} -
           <span class="mission-status">{{mission.status}}</span>
-          {% endif %} {% if mission.status == "available" or mission.status == "requirement" or mission.status == "unknown" %} - {{mission.name}} {% endif %} {% if mission.note %} ({{mission.note}}) {% endif %}
+          {% endif %} {% if mission.status == "available" or mission.status == "requirement" or mission.status == "unknown" %} -
+          <span>{{mission.name}}</span>
+          {% if mission.note %}
+          <span>({{mission.note}})</span>
+          {% endif %} {% endif %}
         </li>
         {% endfor %}
       </ul>
