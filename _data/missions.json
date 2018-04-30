@@ -125,7 +125,7 @@
         {
             "number": 25,
             "name": "Icecrag Ascent",
-            "status": "available"
+            "status": "complete"
         },
         {
             "number": 26,
@@ -149,10 +149,43 @@
             "status": "available"
         },
         {
+            "number": 30,
+            "name": "?",
+            "status": "unknown"
+        },
+        {
+            "number": 31,
+            "name": "?",
+            "status": "unknown"
+        },
+        {
+            "number": 32,
+            "name": "?",
+            "status": "unknown"
+        },
+        {
+            "number": 33,
+            "name": "Savvas Armory",
+            "note": "Requires PA: The Drake's Command or PA: The Voice's Command",
+            "status": "requirement"
+        },
+        {
+            "number": 34,
+            "name": "Scorched Summit",
+            "note": "Requires PA: The Drake's Command",
+            "status": "complete"
+        },
+        {
             "number": 67,
             "name": "Arcane Library",
             "note": "Side-quest",
             "status": "complete"
+        },
+        {
+            "number": 87,
+            "name": "Corrupted Cove",
+            "note": "Side-quest, Requires PA: The Poison's Source",
+            "status": "available"
         },
         {
             "number": 93,
