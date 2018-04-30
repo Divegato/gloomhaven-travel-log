@@ -210,6 +210,18 @@
             "name": "Slippery Slope",
             "status": "complete",
             "campaign": "Capital Intrigue"
+        },
+        {
+            "number": "CI4",
+            "name": "Emergent Evidence",
+            "status": "complete",
+            "campaign": "Capital Intrigue"
+        },
+        {
+            "number": "CI5",
+            "name": "They Just Keep Coming",
+            "status": "complete",
+            "campaign": "Capital Intrigue"
         }
     ]
 }
