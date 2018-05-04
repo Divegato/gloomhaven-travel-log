@@ -222,6 +222,36 @@
             "name": "They Just Keep Coming",
             "status": "complete",
             "campaign": "Capital Intrigue"
+        },
+        {
+            "number": "CI6",
+            "name": "Peer Pressure",
+            "status": "complete",
+            "campaign": "Capital Intrigue"
+        },
+        {
+            "number": "CI7",
+            "name": "?",
+            "status": "available",
+            "campaign": "Capital Intrigue"
+        },
+        {
+            "number": "CI8",
+            "name": "?",
+            "status": "unknown",
+            "campaign": "Capital Intrigue"
+        },
+        {
+            "number": "CI9",
+            "name": "?",
+            "status": "unknown",
+            "campaign": "Capital Intrigue"
+        },
+        {
+            "number": "CI10",
+            "name": "?",
+            "status": "unknown",
+            "campaign": "Capital Intrigue"
         }
     ]
 }
