@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../site.css" />
+  <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Nothing+You+Could+Do" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pirata+One" rel="stylesheet">
+</head>
+
+<body>
+  <h1 class="team-title">{{page.team}}</h1>
+  <div class="text-center header-img">
+    <img src="../images/{{page.photo}}.jpg" class="img-fluid party-image" />
+  </div>
+  <div class="container">
+    <ul class="achievements global-achievements">
+      {% for achievement in site.data.achievements.global %}
+      <li>{{achievement}}</li>
+      {% endfor %}
+    </ul>
+    <div class="team-names row d-md-flex d-none">
+      <div class="col-12">
+        <ul class="achievements party-achievements">
+          {% for achievement in site.data.achievements[page.teamId] %}
+          <li>{{achievement}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% for post in site.posts %} {% if post.team == page.team %}
+    <div class="row">
+      <div class="offset-2 col-8">
+        <div class="post post-result-{{post.result}}">
+          <hr>
+          <div class="post-header">
+            <span class="float-right text-muted">{{post.date | date_to_string}}</span>
+            <h3>{{post.title}}</h3>
+          </div>
+          {% if post.image != Nil %}
+          <img src="../images/{{post.image}}.jpg" class="img-thumbnail post-image-large" /> {% elsif post.enemy != Nil %}
+          <img src="../images/enemies/{{post.enemy}}.jpg" class="img-thumbnail enemy-image-large" /> {% endif %}
+          <div class="post-content">
+            {{post.excerpt}}
+          </div>
+          <div class="post-footer">
+            {% for reward in post.rewards %}
+            <div class="post-reward">{{reward}}</div>
+            {% endfor %}
+            <div class="post-result post-result-{{post.result}}">{{post.result}}</div>
+            <div class="post-signature text-muted">- {{post.team}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %} {% include missions.html %}
+  </div>
+</body>
+
+</html>

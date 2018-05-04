@@ -16,6 +16,18 @@ body {
     .header-img {
         background-color: #2a1a13;
     }
+    h1.team-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-shadow: -1px -1px 0 #CCC, 1px -1px 0 #CCC, -1px 1px 0 #CCC, 1px 1px 0 #CCC;
+        font-family: 'Pirata One', cursive;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 5.5rem;
+    }
     .container {
         background-color: #f0e1da;
         ul.achievements {
@@ -54,9 +66,16 @@ body {
             &.post-result-failed .post-header {
                 text-decoration: line-through;
             }
-            .enemy-image, .post-image {
+            .enemy-image,
+            .post-image {
                 float: right;
                 max-width: 150px;
+            }
+            .enemy-image-large,
+            .post-image-large {
+                float: right;
+                max-width: 350px;
+                margin-left: 20px;
             }
             .post-header {
                 font-family: 'Pirata One', cursive;
