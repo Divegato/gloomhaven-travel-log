@@ -49,7 +49,7 @@
             "number": 10,
             "name": "Plane of Elemental Power",
             "note": "Before GA: The Rift Neutralized",
-            "status": "available"
+            "status": "complete"
         },
         {
             "number": 11,
@@ -104,13 +104,15 @@
         },
         {
             "number": 21,
-            "name": "?",
-            "status": "unknown"
+            "name": "Infernal Throne",
+            "note": "Before GA: The Rift Neutralized",
+            "status": "available"
         },
         {
             "number": 22,
-            "name": "?",
-            "status": "unknown"
+            "name": "Temple of the Elements",
+            "note": "Requires PA: A Demon's Errand or PA: Following Clues",
+            "status": "available"
         },
         {
             "number": 23,

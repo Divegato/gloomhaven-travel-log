@@ -11,7 +11,7 @@
           #{{mission.number}} {% if mission.status != "unknown" %} -
           <span class="mission-status">{{mission.status}}</span>
           {% endif %} {% if mission.status == "available" or mission.status == "requirement" or mission.status == "unknown" %} - {{mission.name}}
-          {% endif %} {% if mission.note %} ({{mission.note}}) {% endif %}
+          {% endif %} {% if mission.note and mission.status != "complete" %} ({{mission.note}}) {% endif %}
         </li>
         {% endfor %}
       </ul>
