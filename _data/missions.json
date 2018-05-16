@@ -233,14 +233,14 @@
         },
         {
             "number": "CI7",
-            "name": "?",
-            "status": "available",
+            "name": "The Chase",
+            "status": "complete",
             "campaign": "Capital Intrigue"
         },
         {
             "number": "CI8",
             "name": "?",
-            "status": "unknown",
+            "status": "available",
             "campaign": "Capital Intrigue"
         },
         {
